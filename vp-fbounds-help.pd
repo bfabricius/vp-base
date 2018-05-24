@@ -1,0 +1,26 @@
+#N canvas 0 22 650 389 10;
+#X obj 450 31 hsl 128 15 0 1 0 0 empty empty 0-to-1-input -2 -8 0 10
+-262144 -1 -1 0 1;
+#X floatatom 447 126 5 0 0 0 - - -, f 5;
+#X obj 24 288 cnv 15 400 30 empty empty OUTPUTS 20 12 0 14 -99865 -262144
+0;
+#X obj 24 101 cnv 15 400 30 empty empty CONTROLS 20 12 0 14 -99865
+-262144 0;
+#X obj 24 230 cnv 15 400 30 empty empty INPUTS 20 12 0 14 -99865 -262144
+0;
+#X obj 20 17 cnv 15 400 30 empty empty FBOUNDS 20 12 0 14 -99865 -262144
+0;
+#X text 25 136 none/;
+#X text 23 264 IN - signal in;
+#X text 24 326 OUT - output;
+#X floatatom 447 51 5 0 0 0 - - -, f 5;
+#X obj 24 160 cnv 15 400 30 empty empty PARAMETERS 20 12 0 14 -99865
+-262144 0;
+#X text 25 196 \$1: float - upper bound \, \$2: float - lower bound
+;
+#X obj 447 84 vp-fbounds 20.5 2.3;
+#X text 24 49 Transform normalized float input range between 0 and
+1 to float range with upper and lower bound.;
+#X connect 0 0 9 0;
+#X connect 9 0 12 0;
+#X connect 12 0 1 0;

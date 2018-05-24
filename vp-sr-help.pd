@@ -1,0 +1,22 @@
+#N canvas 305 169 572 361 10;
+#X obj 24 288 cnv 15 400 30 empty empty OUTPUTS 20 12 0 14 -99865 -262144
+0;
+#X obj 24 101 cnv 15 400 30 empty empty CONTROLS 20 12 0 14 -99865
+-262144 0;
+#X obj 24 230 cnv 15 400 30 empty empty INPUTS 20 12 0 14 -99865 -262144
+0;
+#X obj 20 17 cnv 15 400 30 empty empty SR 20 12 0 14 -99865 -262144
+0;
+#X text 25 136 none/;
+#X obj 24 160 cnv 15 400 30 empty empty PARAMETERS 20 12 0 14 -99865
+-262144 0;
+#X text 24 49 Transform normalized float input range between 0 and
+1 to float range with upper and lower bound.;
+#X obj 443 58 vp-sr;
+#X floatatom 443 80 5 0 0 0 - - -, f 5;
+#X obj 443 20 loadbang;
+#X text 24 326 OUT - sample rate value;
+#X text 23 264 IN - bang \, trigger;
+#X text 25 196 none/;
+#X connect 7 0 8 0;
+#X connect 9 0 7 0;
